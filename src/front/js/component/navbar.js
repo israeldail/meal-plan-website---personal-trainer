@@ -17,16 +17,13 @@ export const Navbar1 = () => {
   return (
     <Navbar expand="lg">
       <Container>
-        <FontAwesomeIcon
-          icon={faBars}
-          style={{ fontSize: "32px", marginLeft: "1rem" }}
-          onClick={handleShow}
-        />
+       
         <>
           <Offcanvas
             show={show}
             onHide={handleClose}
             style={{ backgroundColor: "#E2984E" }}
+			placement="end"
           >
             <Offcanvas.Header closeButton>
               <Offcanvas.Title>Meal Plans Brand Name</Offcanvas.Title>
@@ -61,6 +58,11 @@ export const Navbar1 = () => {
           style={{ fontSize: "32px", marginRight: "1rem" }}
         />
       </Container>
+	  <FontAwesomeIcon
+          icon={faBars}
+          style={{ fontSize: "32px", marginRight: "1rem" }}
+          onClick={handleShow}
+        />
     </Navbar>
   );
 };
